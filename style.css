@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #B8E2C8;
+}
+.container{
+    height: 100vh;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    gap: 1rem;
+}
+.game{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    height: 72vmin;
+    width: 72vmin;
+    /* border: 1px solid black; */
+}
+h1{
+    font-size: 2.5rem;
+}
+.box{
+    background-color: #A5B5BF;
+    height: 23vmin;
+    width: 23vmin;
+    border-radius: 0.5rem;
+    font-size: 8rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* color: #c51e31; */
+    border: none;
+    /* animation: dis 1.5s; */
+    /* animation-iteration-count: 1; */
+}
+.ani{
+    animation: dis 100ms;
+    transform: 1s;
+}
+
+@keyframes dis{
+    0%{
+        font-size: 0;
+    }
+    25%{
+        font-size: 2rem;
+    }
+    50%{
+        font-size: 4rem;
+    }
+    75%{
+        font-size: 6rem;
+    }
+    100%{
+        font-size: 8rem;
+    }
+}
+
+.reset{
+    padding: 0.8rem 2.8rem;
+    font-size: 1.5rem;
+    background-color: transparent;
+    font-weight: 700;
+    border: 3px solid black;
+
+}
+.win-name{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+@media (max-width:550px) {
+    .container{
+        gap: 2.5rem;
+    }
+    .game{
+        height: 90vmin;
+        width: 90vmin;
+    }
+    .box{
+        height: 27vmin;
+        width: 27vmin;
+        font-size: 4.5rem;
+    }
+    @keyframes dis{
+        0%{
+            font-size: 1rem;
+        }
+        25%{
+            font-size: 2rem;
+        }
+        50%{
+            font-size: 3rem;
+        }
+        75%{
+            font-size: 4rem;
+        }
+        100%{
+            font-size: 5rem;
+        }
+    }
+}
