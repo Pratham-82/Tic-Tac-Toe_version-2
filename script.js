@@ -18,8 +18,9 @@ const winChance = [
     [0,4,8],
     [2,4,6]
 ];
+let x = true;
 let count = 0;
-let turn = true
+let turn = true;
 boxes.forEach((box)=>{
     box.addEventListener('click',()=>{
         if(turn){
@@ -34,34 +35,27 @@ boxes.forEach((box)=>{
         box.classList.add('ani');
         box.disabled=true;
 
-        checkWinner();
-        sound.play();
         count++;
-        // console.log(count);
-        draw()
+        checkWinner();
+        if(count==9 && x){
+            winName.innerText = 'Draw';
+            sound3.play();
+        }
+        sound.play();
+        console.log(count);
     })
 })
 
     
-
-
-let draw = ()=>{
-    if(count==9){
-        winName.innerText = 'Draw';
-        sound3.volume = 0.7;
-        sound3.play();
-    }
-}
 const checkWinner = ()=>{
     winChance.forEach((win)=>{
-        // console.log(boxes[win[0]].innerText,boxes[win[1]].innerText,boxes[win[2]].innerText);
         box1 = boxes[win[0]].innerText;
         box2 = boxes[win[1]].innerText;
         box3 = boxes[win[2]].innerText;
 
         if(box1!=''&&box2!=''&&box3!=''){
             if(box1==box2&&box2==box3){
-                // console.log(`${box1} is winner`);
+                x = false;
                 winName.innerText = `${box1} Wins Game`;
                 boxes.forEach((box)=>{
                     box.disabled = true;
