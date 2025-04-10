@@ -91,23 +91,66 @@ h1{
     .box{
         height: 27vmin;
         width: 27vmin;
-        font-size: 4.5rem;
+        font-size: 8rem;
     }
     @keyframes dis{
         0%{
             font-size: 1rem;
         }
-        25%{
-            font-size: 2rem;
+        100%{
+            font-size: 8rem;
         }
-        50%{
-            font-size: 3rem;
-        }
-        75%{
-            font-size: 4rem;
+    }
+}
+
+@media(max-width:450px){
+    .box{
+        font-size: 6.5rem;
+    }
+    @keyframes dis{
+        0%{
+            font-size: 1rem;
         }
         100%{
-            font-size: 5rem;
+            font-size: 6.5rem;
+        }
+    }
+}
+@media(max-width:350px){
+    .box{
+        font-size: 5.5rem;
+    }
+    @keyframes dis{
+        0%{
+            font-size: 1rem;
+        }
+        100%{
+            font-size: 5.5rem;
+        }
+    }
+}
+@media(max-width:250px){
+    .container{
+        gap: 1.5rem;
+    }
+    .box{
+        height: 25vmin;
+        width: 25vmin;
+        font-size: 3rem;
+    }
+    h1{
+        font-size: 2rem;
+    }
+    .reset{
+        font-size: 1.1rem;
+        padding: .5rem 1rem;
+    }
+    @keyframes dis{
+        0%{
+            font-size: 0rem;
+        }
+        100%{
+            font-size: 3rem;
         }
     }
 }
