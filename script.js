@@ -69,6 +69,7 @@ const checkWinner = ()=>{
 
 reset.addEventListener('click',()=>{
     winName.innerText = '';
+    x=true;
     boxes.forEach((box)=>{
         box.innerText = '';
         box.disabled = false;
