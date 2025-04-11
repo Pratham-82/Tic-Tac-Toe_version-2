@@ -4,6 +4,7 @@ let reset = document.querySelector('.reset');
 let sound = document.querySelector('.sound');
 let sound2 = document.querySelector('.sound2');
 let sound3 = document.querySelector('.sound3');
+let sound4 = document.querySelector('.sound4');
 document.querySelector('.box').addEventListener('click',()=>{
     
 })
@@ -69,6 +70,7 @@ const checkWinner = ()=>{
 
 reset.addEventListener('click',()=>{
     winName.innerText = '';
+    sound4.play();
     x=true;
     boxes.forEach((box)=>{
         box.innerText = '';
